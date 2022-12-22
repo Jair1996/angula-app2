@@ -1,0 +1,28 @@
+<form autocomplete="off">
+  <div class="alert" [ngStyle]="{ 'background-color': color }" role="alert">
+    {{ mensaje }}
+  </div>
+  <div class="row">
+    <div class="mb-3 col-6">
+      <label for="txtMessage" class="form-label">Mensaje</label>
+      <input
+        [(ngModel)]="mensaje"
+        type="text"
+        name="mensaje"
+        class="form-control"
+        id="txtMessage"
+        placeholder="Escribe tu mensaje :)"
+      />
+    </div>
+    <div class="col-6">
+      <label for="txtColor" class="form-label">Elige el color</label>
+      <input
+        [(ngModel)]="color"
+        type="color"
+        name="color"
+        class="form-control form-control-color"
+        id="txtColor"
+      />
+    </div>
+  </div>
+</form>
